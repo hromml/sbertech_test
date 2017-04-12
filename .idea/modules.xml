@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sbertech.iml" filepath="$PROJECT_DIR$/.idea/modules/sbertech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sbertech_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sbertech_main.iml" group="sbertech" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sbertech_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sbertech_test.iml" group="sbertech" />
+    </modules>
+  </component>
+</project>
