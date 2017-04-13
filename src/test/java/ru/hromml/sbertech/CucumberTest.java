@@ -53,15 +53,4 @@ public class CucumberTest {
         return equalsClass;
     }
 
-    //   @Test
- //   public static void testCheckingStrings() {
- //       String str1 = "11";
- //       String str2 = "11";
- //       String str3 = "22";//      if (!equalsTest(str1, str3)) {
- //           System.out.println(str1 + " is not " + str3);
- //       } else {
- //           System.out.println(str1 + " = " + str3);
- //       }
- //   }
-
 }
