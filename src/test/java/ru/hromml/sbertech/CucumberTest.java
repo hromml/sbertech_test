@@ -1,7 +1,5 @@
 package ru.hromml.sbertech;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -17,6 +15,7 @@ import java.nio.file.Paths;
  * Created by HROM on 12.04.2017.
  */
 public class CucumberTest {
+    private final EqualsClass equalsClass = new EqualsClass();
     private ArrayList<String> arraystring = new ArrayList<>();   //массив для строк из сценария
     private int n;  // счетчик количества строк из сценария
 
@@ -43,14 +42,18 @@ public class CucumberTest {
             System.out.println("counts of this arrays is different, scenarios strings array count is " + arrayfilestrings.size() + " and file's array count is " + n); // выводим ошибку,если количество не совпадает
         } else { // иначе цикл, от 0 до количества строк
             for (int arraycount = 0; arraycount < n; arraycount++) {
-                if (!equalsTest(arrayfilestrings.get(arraycount), arraystring.get(arraycount))) {  //вызываем метод equalsTest, отправляя строки с индексом = arraycount
+                if (!EqualsClass.equalsTest(arrayfilestrings.get(arraycount), arraystring.get(arraycount))) {  //вызываем метод equalsTest, отправляя строки с индексом = arraycount
                     System.out.println("String " + arrayfilestrings.get(arraycount) + " is not such as " + arraystring.get(arraycount)); // выводим ошибку, если метод вернул false (строки не совпадают)
                 }
             }
         }
     }
 
- //   @Test
+    public EqualsClass getEqualsClass() {
+        return equalsClass;
+    }
+
+    //   @Test
  //   public static void testCheckingStrings() {
  //       String str1 = "11";
  //       String str2 = "11";
@@ -60,18 +63,5 @@ public class CucumberTest {
  //           System.out.println(str1 + " = " + str3);
  //       }
  //   }
-
-    private static boolean equalsTest(String string1, String string2) {  //метод проверяет на true результат метода checkingTwoStrings, которому передаем полученные строки
-        try {
-            Assert.assertTrue(checkingTwoStrings(string1, string2));
-            return true;
-        } catch (java.lang.AssertionError e) {
-            return false;
-        }
-    }
-
-    private static boolean checkingTwoStrings(String checkingstring1, String checkingstring2) {  // сверяем строки и возвращаем результат
-        return checkingstring1.equals(checkingstring2);
-    }
 
 }

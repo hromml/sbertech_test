@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="sbertech_main" target="1.8" />
       <module name="sbertech_test" target="1.8" />
+      <module name="sbertech_test_main" target="1.8" />
+      <module name="sbertech_test_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
